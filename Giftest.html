@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  	<title>Gif Master </title>
+  		<style type="text/css">
+    		button,
+    		div,
+    		form,
+    		input {
+      		margin: 10px;
+    		}
+  		</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1> Gif Master </h1>
+
+		<div id="buttonDump"></div>
+
+		<form id="gifForm">
+      	<label for="userInput">Find Your Fav Gif</label>
+      	<input type="text" id="userInput"><br>
+      	<input id="add-gif" type="submit" value="Find Your Fav Gif">
+    	</form>
+
+    	<div id="gifDump"></div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	
+    	var topics = ["Rugrats", "Courage the Cowerdly Dog", "Hey Arnold", "Johnny Bravo", "Spongbob"];
+
+    	function displayGifs() {
+
+        var movie = $(this).attr("data-name");
+        var queryURL = "GEThttps://giphy.p.mashape.com/v1/gifs/search";
+
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+
+        }) 
+    </script>
+
+
+</body>
+</html>
